@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FLAC to ALAC Converter</title>
+  <link rel="stylesheet" href="src/styles/style.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Wave background elements -->
+  <div class="wave">
+    <div class="wave-1"></div>
+    <div class="wave-2"></div>
+    <div class="wave-3"></div>
+  </div>
+  
+  <div class="container">
+    <header>
+      <h1>FLAC to ALAC Converter</h1>
+      <p class="subtitle">High-quality audio conversion with metadata preservation</p>
+    </header>
+    
+    <main>
+      <div id="drop-area" class="glass-effect">
+        <div class="drop-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </div>
+        <p>Drag & drop FLAC files here</p>
+        <p class="or-divider">or</p>
+        <button id="select-files" class="primary-button">Select Files</button>
+      </div>
+      
+      <div id="file-list-container" class="glass-effect">
+        <h2>Files to Convert</h2>
+        <div class="list-container">
+          <ul id="file-list"></ul>
+        </div>
+      </div>
+      
+      <div id="actions">
+        <button id="convert-btn" class="primary-button accent" disabled>Convert to ALAC</button>
+        <button id="clear-btn" class="secondary-button" disabled>Clear List</button>
+      </div>
+      
+      <div id="progress-container" class="glass-effect">
+        <h3>Converting Files</h3>
+        <div id="progress-bar">
+          <div id="progress"></div>
+        </div>
+        <p id="progress-text">0%</p>
+      </div>
+    </main>
+    
+    <div id="results" class="glass-effect">
+      <h2>Conversion Results</h2>
+      <div id="results-list"></div>
+    </div>
+    
+    <footer>
+      <p>FLAC to ALAC Converter — Preserves metadata and cover art</p>
+      <p class="version">Version 1.0.1</p>
+    </footer>
+  </div>
+  
+  <script src="src/renderer.js"></script>
+</body>
+</html>
